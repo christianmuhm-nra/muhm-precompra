@@ -49,9 +49,25 @@ function toggleFaq(button) {
   }
 }
 
-// Cerrar modal con tecla Escape
+// Menú Móvil Desplegable
+function toggleMobileNav() {
+  const drawer = document.getElementById('mobileNavDrawer');
+  const btn = document.getElementById('mobileMenuBtn');
+  drawer.classList.toggle('open');
+  btn.classList.toggle('active');
+}
+
+function closeMobileNav() {
+  const drawer = document.getElementById('mobileNavDrawer');
+  const btn = document.getElementById('mobileMenuBtn');
+  if (drawer) drawer.classList.remove('open');
+  if (btn) btn.classList.remove('active');
+}
+
+// Cerrar modal o drawer con tecla Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeImageModal();
+    closeMobileNav();
   }
 });

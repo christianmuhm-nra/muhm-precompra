@@ -15,16 +15,18 @@
 </head>
 <body>
 
-  <!-- Top Alert Bar -->
+  <!-- Top Alert Bar con punto rojo integrado en línea -->
   <div class="top-announcement-bar">
     <div class="container announcement-inner">
-      <span class="pulse-dot"></span>
-      <p><strong>¡NO TE LA JUEGUES!</strong> El 68% de las averías ruinosas en coches de ocasión se deben a defectos congénitos de motor que la ITV no detecta.</p>
-      <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20verificar%20un%20coche%20antes%20de%20comprar" target="_blank" class="announcement-link">Verificar mi coche ahora →</a>
+      <div class="announcement-content">
+        <span class="pulse-dot"></span>
+        <span class="announcement-text"><strong>¡NO TE LA JUEGUES!</strong> El 68% de las averías ruinosas en coches de ocasión se deben a defectos congénitos de motor que la ITV no detecta.</span>
+      </div>
+      <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20verificar%20un%20coche%20antes%20de%20comprar" target="_blank" class="announcement-link">Verificar mi coche →</a>
     </div>
   </div>
 
-  <!-- Header / Navigation -->
+  <!-- Header / Navigation Principal -->
   <header class="main-header" id="navbar">
     <div class="container header-container">
       <a href="#hero" class="brand-logo">
@@ -41,22 +43,62 @@
         </div>
       </a>
 
-      <nav class="nav-menu">
+      <!-- Menú Desktop -->
+      <nav class="nav-menu" id="desktopNav">
         <a href="#el-peligro" class="nav-link">El Problema Oculto</a>
         <a href="#comparativa" class="nav-link">Caso Fiesta</a>
-        <a href="#muestrario" class="nav-link">Ejemplos</a>
+        <a href="#muestrario" class="nav-link">Nuestros Informes</a>
         <a href="#tarifas" class="nav-link">Tarifas</a>
+        <a href="#metodo" class="nav-link">Por Qué MUHM</a>
         <a href="#como-funciona" class="nav-link">Cómo Funciona</a>
         <a href="#faq" class="nav-link">Dudas</a>
       </nav>
 
+      <!-- Botón Cabecera "Consúltanos" y Botón Hamburguesa Móvil -->
       <div class="header-actions">
-        <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20solicitar%20un%20informe%20precompra%20para%20un%20coche" target="_blank" class="btn btn-whatsapp-header">
+        <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20consultar%20la%20fiabilidad%20de%20un%20coche" target="_blank" class="btn btn-whatsapp-header">
           <svg class="btn-wa-icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.815 11.815 0 018.413 3.487 11.821 11.821 0 013.48 8.413c-.003 6.558-5.339 11.893-11.893 11.893h-.005a11.882 11.882 0 01-5.683-1.448L.057 24z"/>
           </svg>
-          <span>WhatsApp 608 122 535</span>
+          <span>Consúltanos</span>
         </a>
+
+        <!-- Botón Toggle Menú Móvil -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación" onclick="toggleMobileNav()">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="container mobile-nav-links">
+        <a href="#el-peligro" class="mobile-nav-link" onclick="closeMobileNav()">⚠️ El Problema Oculto</a>
+        <a href="#comparativa" class="mobile-nav-link" onclick="closeMobileNav()">⚖️ Caso Ford Fiesta</a>
+        <a href="#muestrario" class="mobile-nav-link" onclick="closeMobileNav()">📑 Nuestros Informes</a>
+        <a href="#tarifas" class="mobile-nav-link" onclick="closeMobileNav()">💶 Tarifas (Desde 15 €)</a>
+        <a href="#metodo" class="mobile-nav-link" onclick="closeMobileNav()">🔬 Por Qué MUHM</a>
+        <a href="#como-funciona" class="mobile-nav-link" onclick="closeMobileNav()">🚀 Cómo Funciona</a>
+        <a href="#faq" class="mobile-nav-link" onclick="closeMobileNav()">❓ Preguntas Frecuentes</a>
+        <div class="mobile-nav-cta">
+          <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20consultar%20un%20coche" target="_blank" class="btn btn-whatsapp-lg btn-block" onclick="closeMobileNav()">
+            💬 Escribir al WhatsApp 608 122 535
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra Rápida de Accesos Directos Pinned en Móvil -->
+    <div class="mobile-quick-bar">
+      <div class="mobile-quick-scroll">
+        <a href="#el-peligro" class="quick-pill">El Problema</a>
+        <a href="#comparativa" class="quick-pill">Caso Fiesta</a>
+        <a href="#muestrario" class="quick-pill">Informes</a>
+        <a href="#tarifas" class="quick-pill pill-highlight">Tarifas (15 €)</a>
+        <a href="#metodo" class="quick-pill">Método</a>
+        <a href="#faq" class="quick-pill">FAQ</a>
       </div>
     </div>
   </header>
@@ -83,10 +125,10 @@
           Auditamos de forma personalizada el <strong>código exacto de motor</strong>, la <strong>transmisión</strong>, las <strong>campañas de taller europeas</strong> y el <strong>historial real de averías</strong> antes de que firmes o transfieras tu dinero.
         </p>
 
-        <!-- CTA Buttons -->
+        <!-- CTA Buttons: Botón a #muestrario en una sola línea -->
         <div class="hero-cta-group">
-          <a href="#tarifas" class="btn btn-primary btn-lg">
-            Ver Tarifas e Informes (Desde 15 €)
+          <a href="#muestrario" class="btn btn-primary btn-tariff-hero">
+            Ver tarifas e informes (desde 15 €)
           </a>
           <a href="https://wa.me/34608122535?text=Hola%2C%20tengo%20un%20coche%20visto%20y%20quiero%20consultar%20su%20fiabilidad" target="_blank" class="btn btn-whatsapp-lg">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -96,7 +138,7 @@
           </a>
         </div>
 
-        <!-- Social Proof Stats (Sin prometer inmediatez irreal) -->
+        <!-- Social Proof Stats -->
         <div class="hero-stats-row">
           <div class="stat-box">
             <span class="stat-number">+250</span>
@@ -118,7 +160,8 @@
       <!-- Hero Visual: Visualizador del Afiche Comercial Oficial -->
       <div class="hero-visual">
         <div class="poster-preview-card">
-          <div class="poster-preview-badge">AFICHE COMERCIAL OFICIAL</div>
+          <!-- Título corregido: Afiche comercial -->
+          <div class="poster-preview-badge">AFICHE COMERCIAL</div>
           <div class="poster-frame">
             <img src="assets/afiche-comercial-original.jpg" alt="Afiche Comercial MUHM Comparativa Ford Fiesta" class="poster-img-hero">
             <div class="poster-overlay-action">
@@ -136,7 +179,7 @@
     </div>
   </section>
 
-  <!-- Sección: La Trampa de la Segunda Mano -->
+  <!-- Sección: La Trampa de la Segunda Mano (Con filtro a 2 motores en móvil) -->
   <section class="section problem-section" id="el-peligro">
     <div class="container">
       <div class="section-header text-center">
@@ -149,7 +192,7 @@
 
       <div class="danger-cards-grid">
         
-        <!-- Tarjeta 1: PureTech -->
+        <!-- Tarjeta 1: PureTech 1.2 (Visible en Móvil y Desktop) -->
         <div class="danger-card">
           <div class="danger-header">
             <span class="engine-badge danger-badge">❌ RIESGO EXTREMO</span>
@@ -165,8 +208,8 @@
           </div>
         </div>
 
-        <!-- Tarjeta 2: EcoBoost -->
-        <div class="danger-card">
+        <!-- Tarjeta 2: EcoBoost 1.0 (Oculta en Móvil, visible en Desktop) -->
+        <div class="danger-card hide-mobile">
           <div class="danger-header">
             <span class="engine-badge danger-badge">❌ RIESGO EXTREMO</span>
             <span class="car-brand">Ford</span>
@@ -181,8 +224,8 @@
           </div>
         </div>
 
-        <!-- Tarjeta 3: Renault / Nissan 1.2 TCe -->
-        <div class="danger-card">
+        <!-- Tarjeta 3: Renault / Nissan 1.2 TCe (Oculta en Móvil, visible en Desktop) -->
+        <div class="danger-card hide-mobile">
           <div class="danger-header">
             <span class="engine-badge danger-badge">❌ RIESGO ELEVADO</span>
             <span class="car-brand">Renault · Dacia · Nissan</span>
@@ -197,7 +240,7 @@
           </div>
         </div>
 
-        <!-- Tarjeta 4: Ingenium 2.0d -->
+        <!-- Tarjeta 4: Ingenium 2.0d (Visible en Móvil y Desktop) -->
         <div class="danger-card">
           <div class="danger-header">
             <span class="engine-badge danger-badge">❌ RIESGO ELEVADO</span>
@@ -322,8 +365,8 @@
 
       <div class="versus-conclusion text-center">
         <p>¿Hubieras sabido diferenciar estas dos mecánicas mirando solo las fotos de Wallapop o Coches.net? <strong>Nosotros investigamos tu unidad a fondo.</strong></p>
-        <a href="#tarifas" class="btn btn-primary btn-md">
-          Ver planes de informe desde 15 € →
+        <a href="#muestrario" class="btn btn-primary btn-md">
+          Ver ejemplos de informes y tarifas →
         </a>
       </div>
 
@@ -334,7 +377,8 @@
   <section class="section showcase-section" id="muestrario">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag primary-tag">NUESTROS ENTREGABLES</span>
+        <!-- Texto actualizado a "NUESTROS INFORMES" -->
+        <span class="section-tag primary-tag">NUESTROS INFORMES</span>
         <h2 class="section-title">Transparencia absoluta: Así son nuestros informes reales</h2>
         <p class="section-subtitle">
           Nada de textos vagos generados por un chatbot común. Son informes estructurados, redactados con rigor técnico, maquetados para consulta clara y listos para negociar el precio con el vendedor.
@@ -495,7 +539,7 @@
     </div>
   </section>
 
-  <!-- NUEVA SECCIÓN DE TARIFAS Y PRECIOS -->
+  <!-- SECCIÓN DE TARIFAS Y PRECIOS -->
   <section class="section pricing-section" id="tarifas">
     <div class="container">
       <div class="section-header text-center">
@@ -612,6 +656,96 @@
     </div>
   </section>
 
+  <!-- Sección: Por Qué No es una Simple Búsqueda en Google (Rediseñada para Móvil y Desktop) -->
+  <section class="section comparison-method-section" id="metodo">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag primary-tag">RIGOR CIENTÍFICO</span>
+        <h2 class="section-title">¿Por qué esto no es "preguntarle a Google o a ChatGPT"?</h2>
+        <p class="section-subtitle">
+          Las búsquedas convencionales mezclan opiniones subjetivas de foros y las IA generalistas inventan datos. Nuestro método es un sistema de ingeniería estructurado.
+        </p>
+      </div>
+
+      <!-- Nuevo Diseño en Tarjetas Comparativas (Limpio en Móvil y Desktop) -->
+      <div class="method-cards-grid">
+        
+        <!-- Bloque 1: Identificación -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <div class="method-icon-circle">🔍</div>
+            <h3 class="method-card-title">1. Identificación del Motor</h3>
+          </div>
+          <div class="method-contrast-block">
+            <div class="contrast-row contrast-bad">
+              <span class="contrast-label">❌ Google / IA Genérica:</span>
+              <p>Se queda en la etiqueta comercial ("Peugeot 1.2" o "Ford EcoBoost") o alucina generaciones y códigos incompatibles.</p>
+            </div>
+            <div class="contrast-row contrast-good">
+              <span class="contrast-label">✅ Auditoría MUHM:</span>
+              <p>Identificación exacta por <strong>código de motor, cilindrada y año frontera</strong> (ej. distinguir PureTech atmosférico EB2 de Turbo EB2DTS).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloque 2: Binomio Motor + Caja -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <div class="method-icon-circle">⚙️</div>
+            <h3 class="method-card-title">2. Binomio Motor + Caja</h3>
+          </div>
+          <div class="method-contrast-block">
+            <div class="contrast-row contrast-bad">
+              <span class="contrast-label">❌ Google / IA Genérica:</span>
+              <p>Juzga el motor de forma aislada sin saber qué transmisión monta la unidad analizada.</p>
+            </div>
+            <div class="contrast-row contrast-good">
+              <span class="contrast-label">✅ Auditoría MUHM:</span>
+              <p><strong>Evaluación conjunta obligatoria:</strong> Una mecánica buena se descarta de inmediato si va asociada a una caja robotizada o DSG de embrague seco.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloque 3: Fuentes y Taller -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <div class="method-icon-circle">📚</div>
+            <h3 class="method-card-title">3. Bases de Datos de Taller</h3>
+          </div>
+          <div class="method-contrast-block">
+            <div class="contrast-row contrast-bad">
+              <span class="contrast-label">❌ Google / IA Genérica:</span>
+              <p>Recicla opiniones de foros antiguos desactualizados o respuestas genéricas tipo "hazle el mantenimiento".</p>
+            </div>
+            <div class="contrast-row contrast-good">
+              <span class="contrast-label">✅ Auditoría MUHM:</span>
+              <p>Cruzamos <strong>boletines técnicos europeos (TSB), campañas oficiales de llamada a revisión y experiencia real de taller</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloque 4: Objetividad -->
+        <div class="method-card">
+          <div class="method-card-header">
+            <div class="method-icon-circle">🎯</div>
+            <h3 class="method-card-title">4. Objetividad Total</h3>
+          </div>
+          <div class="method-contrast-block">
+            <div class="contrast-row contrast-bad">
+              <span class="contrast-label">❌ Google / IA Genérica:</span>
+              <p>Sesgada por comerciales que quieren vender o fanáticos de marca que niegan los problemas endémicos.</p>
+            </div>
+            <div class="contrast-row contrast-good">
+              <span class="contrast-label">✅ Auditoría MUHM:</span>
+              <p><strong>Semáforo tajante:</strong> Si el coche tiene un defecto congénito costoso, te decimos sin rodeos que no lo compres.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Sección: El Afiche Comercial y QR -->
   <section class="section qr-section" id="afiche-comercial">
     <div class="container">
@@ -644,58 +778,6 @@
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección: Por Qué No es una Simple Búsqueda en Google -->
-  <section class="section comparison-method-section">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag primary-tag">RIGOR CIENTÍFICO</span>
-        <h2 class="section-title">¿Por qué esto no es "preguntarle a Google o a ChatGPT"?</h2>
-        <p class="section-subtitle">
-          Las búsquedas convencionales mezclan opiniones subjetivas de foros y las IA generalistas inventan datos. Nuestro método es un sistema técnico riguroso.
-        </p>
-      </div>
-
-      <div class="method-table-wrapper">
-        <table class="method-table">
-          <thead>
-            <tr>
-              <th>Aspecto</th>
-              <th class="col-bad">Búsqueda rápida en Google / Foros</th>
-              <th class="col-bad">Preguntar a una IA genérica</th>
-              <th class="col-good">Auditoría MUHM IA-Assisted</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Identificación del Motor</strong></td>
-              <td>Se queda en el nombre comercial (ej. "Peugeot 1.2").</td>
-              <td>Alucina códigos y confunde generaciones.</td>
-              <td class="cell-good"><strong>Identificación exacta por código, cilindrada y año frontera</strong> (ej. EB2 vs EB2DTS).</td>
-            </tr>
-            <tr>
-              <td><strong>Binomio Motor + Caja</strong></td>
-              <td>Opina del motor sin saber qué caja lleva.</td>
-              <td>Rara vez relaciona fallos de transmisión.</td>
-              <td class="cell-good"><strong>Evaluación conjunta:</strong> Una mecánica buena puede ser descartada si lleva una caja robotizada o DSG seco.</td>
-            </tr>
-            <tr>
-              <td><strong>Bases de Datos</strong></td>
-              <td>Hilos de foros antiguos de 2012 sin actualizar.</td>
-              <td>Respuestas genéricas tipo "hazle el mantenimiento".</td>
-              <td class="cell-good"><strong>Boletines técnicos europeos (TSB), campañas de llamada a revisión y talleres especializados.</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Objetividad</strong></td>
-              <td>Sesgada por fanáticos de marcas o comerciales.</td>
-              <td>Tono complaciente sin veredicto claro.</td>
-              <td class="cell-good"><strong>Semáforo tajante:</strong> Si el motor tiene riesgo congénito caro, te decimos que no lo compres.</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </section>
