@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUHM · Auditoría Precompra Inteligente de Vehículos Usados</title>
+  <meta name="description" content="¿Vas a comprar un coche de segunda mano? Descubre si su motor es fiable antes de pagar. Informes técnicos precompra independientes basados en datos de ingeniería.">
+  
+  <!-- Tipografía Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Alert Bar -->
+  <div class="top-announcement-bar">
+    <div class="container announcement-inner">
+      <span class="pulse-dot"></span>
+      <p><strong>¡NO TE LA JUEGUES!</strong> El 68% de las averías ruinosas en coches de ocasión se deben a defectos congénitos de motor que la ITV no detecta.</p>
+      <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20verificar%20un%20coche%20antes%20de%20comprar" target="_blank" class="announcement-link">Verificar mi coche ahora →</a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="main-header" id="navbar">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+            <path d="M12 2a10 10 0 0 1 10 10"></path>
+            <path d="M12 12 2.1 12"></path>
+          </svg>
+        </div>
+        <div class="brand-names">
+          <span class="logo-title">MUHM</span>
+          <span class="logo-subtitle">IA-ASSISTED RESEARCH</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#el-peligro" class="nav-link">El Problema Oculto</a>
+        <a href="#comparativa" class="nav-link">Caso Fiesta</a>
+        <a href="#muestrario" class="nav-link">Ejemplos</a>
+        <a href="#tarifas" class="nav-link">Tarifas</a>
+        <a href="#como-funciona" class="nav-link">Cómo Funciona</a>
+        <a href="#faq" class="nav-link">Dudas</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20solicitar%20un%20informe%20precompra%20para%20un%20coche" target="_blank" class="btn btn-whatsapp-header">
+          <svg class="btn-wa-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.815 11.815 0 018.413 3.487 11.821 11.821 0 013.48 8.413c-.003 6.558-5.339 11.893-11.893 11.893h-.005a11.882 11.882 0 01-5.683-1.448L.057 24z"/>
+          </svg>
+          <span>WhatsApp 608 122 535</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-tag">AUDITORÍA MECÁNICA INDEPENDIENTE</span>
+        </div>
+        
+        <h1 class="hero-title">
+          ¡No te la juegues!<br>
+          <span class="highlight-text">¿Este motor es fiable</span> o una avería oculta de 4.000 €?
+        </h1>
+        
+        <p class="hero-subtitle">
+          Dos coches pueden ser <strong>idénticos por fuera</strong>, tener el mismo año y la misma ITV limpia, pero esconder motores con destinos opuestos: uno durará 300.000 km y el otro romperá por defecto de fábrica. 
+        </p>
+
+        <p class="hero-highlight-note">
+          Auditamos de forma personalizada el <strong>código exacto de motor</strong>, la <strong>transmisión</strong>, las <strong>campañas de taller europeas</strong> y el <strong>historial real de averías</strong> antes de que firmes o transfieras tu dinero.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#tarifas" class="btn btn-primary btn-lg">
+            Ver Tarifas e Informes (Desde 15 €)
+          </a>
+          <a href="https://wa.me/34608122535?text=Hola%2C%20tengo%20un%20coche%20visto%20y%20quiero%20consultar%20su%20fiabilidad" target="_blank" class="btn btn-whatsapp-lg">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Consultar por WhatsApp
+          </a>
+        </div>
+
+        <!-- Social Proof Stats (Sin prometer inmediatez irreal) -->
+        <div class="hero-stats-row">
+          <div class="stat-box">
+            <span class="stat-number">+250</span>
+            <span class="stat-label">Familias de motor mapeadas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Independiente de vendedores</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-number">Manual</span>
+            <span class="stat-label">Análisis técnico caso a caso</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Visualizador del Afiche Comercial Oficial -->
+      <div class="hero-visual">
+        <div class="poster-preview-card">
+          <div class="poster-preview-badge">AFICHE COMERCIAL OFICIAL</div>
+          <div class="poster-frame">
+            <img src="../assets/afiche-comercial-original.jpg" alt="Afiche Comercial MUHM Comparativa Ford Fiesta" class="poster-img-hero">
+            <div class="poster-overlay-action">
+              <a href="../afiche/afiche_comercial.html" target="_blank" class="btn btn-light-glow">
+                🔍 Ver Afiche con Tipografía Grande A4
+              </a>
+            </div>
+          </div>
+          <div class="poster-caption">
+            <span>Diseñado para decisión rápida · Semáforo de fiabilidad · QR integrado</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección: La Trampa de la Segunda Mano -->
+  <section class="section problem-section" id="el-peligro">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag alert-tag">LA REALIDAD DEL MERCADO</span>
+        <h2 class="section-title">¿Por qué un coche "bonito y con ITV" puede ser tu peor pesadilla?</h2>
+        <p class="section-subtitle">
+          Los compraventas y particulares limpian la tapicería y pasan la ITV antes de vender. Pero la ITV <strong>no abre el motor</strong> ni comprueba los fallos endémicos de diseño que arruinan a miles de conductores cada mes.
+        </p>
+      </div>
+
+      <div class="danger-cards-grid">
+        
+        <!-- Tarjeta 1: PureTech -->
+        <div class="danger-card">
+          <div class="danger-header">
+            <span class="engine-badge danger-badge">❌ RIESGO EXTREMO</span>
+            <span class="car-brand">Peugeot · Citroën · Opel</span>
+          </div>
+          <h3 class="danger-engine-name">1.2 PureTech Turbo (EB2)</h3>
+          <p class="danger-flaw">
+            <strong>La trampa:</strong> Correa de distribución sumergida en el aceite del motor (<em>wet belt</em>). La goma se degrada químicamente, se deshilacha y los restos taponan la chupona del aceite.
+          </p>
+          <div class="danger-consequence">
+            <span class="consequence-label">Consecuencia real:</span>
+            <span class="consequence-text">Pérdida de presión de aceite repentina en autovía y gripado de motor. <strong>Coste: 4.500 € a 6.000 €</strong>.</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: EcoBoost -->
+        <div class="danger-card">
+          <div class="danger-header">
+            <span class="engine-badge danger-badge">❌ RIESGO EXTREMO</span>
+            <span class="car-brand">Ford</span>
+          </div>
+          <h3 class="danger-engine-name">1.0 EcoBoost 3 cil. (Wet Belt)</h3>
+          <p class="danger-flaw">
+            <strong>La trampa:</strong> Mismo concepto de correa bañada en aceite. Extremadamente sensible al tipo exacto de aceite y a los intervalos. La correa de la bomba de aceite también se degrada.
+          </p>
+          <div class="danger-consequence">
+            <span class="consequence-label">Consecuencia real:</span>
+            <span class="consequence-text">Fallo de lubricación, rotura de turbo y motor inservible. <strong>Coste: 4.000 €</strong>.</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Renault / Nissan 1.2 TCe -->
+        <div class="danger-card">
+          <div class="danger-header">
+            <span class="engine-badge danger-badge">❌ RIESGO ELEVADO</span>
+            <span class="car-brand">Renault · Dacia · Nissan</span>
+          </div>
+          <h3 class="danger-engine-name">1.2 TCe / DIG-T (H5Ft / HR12DDT)</h3>
+          <p class="danger-flaw">
+            <strong>La trampa:</strong> Defecto congénito en segmentos y calibración de inyección directa. Provoca un consumo brutal de aceite (más de 1 litro cada 1.000 km) sin fugas visibles.
+          </p>
+          <div class="danger-consequence">
+            <span class="consequence-label">Consecuencia real:</span>
+            <span class="consequence-text">Pérdida de compresión, autoencendido prematuro y destrucción de cilindros.</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Ingenium 2.0d -->
+        <div class="danger-card">
+          <div class="danger-header">
+            <span class="engine-badge danger-badge">❌ RIESGO ELEVADO</span>
+            <span class="car-brand">Jaguar · Land Rover</span>
+          </div>
+          <h3 class="danger-engine-name">2.0 Ingenium Diésel (AJ200D)</h3>
+          <p class="danger-flaw">
+            <strong>La trampa:</strong> Cadena de distribución ubicada en la parte posterior del motor (lado caja). Desgaste prematuro de patines plásticos y dilución severa de aceite por regeneraciones DPF.
+          </p>
+          <div class="danger-consequence">
+            <span class="consequence-label">Consecuencia real:</span>
+            <span class="consequence-text">Rotura de cadena o turbo. Sustituir la cadena exige desmontar caja y transmisión. <strong>Coste: +3.500 €</strong>.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner de Aviso -->
+      <div class="safe-warning-box">
+        <div class="warning-box-icon">💡</div>
+        <div class="warning-box-text">
+          <h4>No todos los coches de una misma marca son malos, ni todos son buenos</h4>
+          <p>
+            En la misma carrocería de un <strong>Ford Fiesta</strong> o un <strong>Peugeot 107/208</strong> conviven motores que son tanques indestructibles y motores que son bombas de relojería. <strong>Nuestros informes te dicen con exactitud matemática qué llevas bajo el capó.</strong>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección: El Caso Comparativo (Ford Fiesta) -->
+  <section class="section comparison-section" id="comparativa">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag success-tag">EL EJEMPLO QUE LO EXPLICA TODO</span>
+        <h2 class="section-title">Mismo coche por fuera, destinos opuestos por dentro</h2>
+        <p class="section-subtitle">
+          Mira este caso real que analizamos para compraventa: dos Ford Fiesta con carrocería parecida y precios similares en portales de segunda mano.
+        </p>
+      </div>
+
+      <div class="versus-container">
+        
+        <!-- Tarjeta Verde: Recomendado -->
+        <div class="versus-card card-win">
+          <div class="versus-tag-top tag-win">
+            <span>✅ COMPRA INTELIGENTE · RECOMENDADO</span>
+          </div>
+          <div class="versus-model-info">
+            <h3>Ford Fiesta 1.25 Trend</h3>
+            <span class="versus-meta">2015 · 173.090 km · 82 CV · Manual 5v</span>
+          </div>
+          <div class="versus-img-wrap">
+            <img src="../assets/ford_fiesta_azul.jpg" alt="Ford Fiesta 1.25 Trend" class="versus-car-img">
+          </div>
+          <div class="versus-specs-list">
+            <div class="vspec-row">
+              <span class="vspec-k">Motor:</span>
+              <span class="vspec-v"><strong>1.25 Duratec / Sigma</strong> (4 cilindros)</span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Distribución:</span>
+              <span class="vspec-v"><strong>Correa seca convencional</strong> (cambio fácil)</span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Inyección:</span>
+              <span class="vspec-v">Indirecta (cero carbonilla en admisión)</span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Turbo:</span>
+              <span class="vspec-v">No (Atmosférico, menos piezas de fallo)</span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Veredicto:</span>
+              <span class="vspec-v text-success"><strong>Mecánica indestructible</strong> con mantenimiento básico.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="versus-separator">
+          <span class="vs-circle">VS</span>
+        </div>
+
+        <!-- Tarjeta Roja: No Recomendado -->
+        <div class="versus-card card-lose">
+          <div class="versus-tag-top tag-lose">
+            <span>❌ TRAMPA MECÁNICA · NO RECOMENDADO</span>
+          </div>
+          <div class="versus-model-info">
+            <h3>Ford Fiesta 1.0 EcoBoost</h3>
+            <span class="versus-meta">2016 · 120.607 km · 100 CV · Manual 5v</span>
+          </div>
+          <div class="versus-img-wrap">
+            <img src="../assets/ford_fiesta_rojo.jpg" alt="Ford Fiesta 1.0 EcoBoost" class="versus-car-img">
+          </div>
+          <div class="versus-specs-list">
+            <div class="vspec-row">
+              <span class="vspec-k">Motor:</span>
+              <span class="vspec-v"><strong>1.0 EcoBoost</strong> (3 cilindros turbo)</span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Distribución:</span>
+              <span class="vspec-v text-danger"><strong>Correa bañada en aceite (Wet Belt)</strong></span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Inyección:</span>
+              <span class="vspec-v">Directa de alta presión</span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Turbo:</span>
+              <span class="vspec-v">Sí, muy exigido térmicamente</span>
+            </div>
+            <div class="vspec-row">
+              <span class="vspec-k">Veredicto:</span>
+              <span class="vspec-v text-danger"><strong>Alto riesgo de rotura total</strong> de motor.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="versus-conclusion text-center">
+        <p>¿Hubieras sabido diferenciar estas dos mecánicas mirando solo las fotos de Wallapop o Coches.net? <strong>Nosotros investigamos tu unidad a fondo.</strong></p>
+        <a href="#tarifas" class="btn btn-primary btn-md">
+          Ver planes de informe desde 15 € →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección: Muestrario de Informes Reales (Showcase) -->
+  <section class="section showcase-section" id="muestrario">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag primary-tag">NUESTROS ENTREGABLES</span>
+        <h2 class="section-title">Transparencia absoluta: Así son nuestros informes reales</h2>
+        <p class="section-subtitle">
+          Nada de textos vagos generados por un chatbot común. Son informes estructurados, redactados con rigor técnico, maquetados para consulta clara y listos para negociar el precio con el vendedor.
+        </p>
+      </div>
+
+      <!-- Selector de Tipo de Informe -->
+      <div class="report-tabs-wrapper">
+        <button class="tab-btn active" onclick="switchReportTab('tab-afiche')">
+          📄 1. Informe Precompra Inteligente (Afiche A4 - 15 €)
+        </button>
+        <button class="tab-btn" onclick="switchReportTab('tab-detallado')">
+          📑 2. Informe Técnico Detallado (Multi-página - 20 €)
+        </button>
+      </div>
+
+      <!-- Contenido Tab 1: Informe Afiche Peugeot 107 -->
+      <div class="report-tab-content active" id="tab-afiche">
+        <div class="report-showcase-grid">
+          
+          <div class="report-preview-visual">
+            <div class="zoom-card" onclick="openImageModal('../assets/informe-peugeot-107.jpg')">
+              <img src="../assets/informe-peugeot-107.jpg" alt="Informe Técnico Resumido Peugeot 107 Toyota 1KR-FE" class="doc-real-img">
+              <div class="zoom-overlay">
+                <span>🔍 Clic para ampliar a pantalla completa</span>
+              </div>
+            </div>
+            <span class="doc-caption">Ejemplo real entregado: Peugeot 107 1.0 Urban (Motor Toyota 1KR-FE) · Clasificación: RECOMENDADO</span>
+          </div>
+
+          <div class="report-info-side">
+            <div class="report-badge-tier">FORMATO RÁPIDO · 1 PÁGINA A4 · 15 €</div>
+            <h3 class="report-title">Informe Precompra Inteligente</h3>
+            <p class="report-desc">
+              Diseñado para quienes están comparando coches en portales o subastas y necesitan una respuesta <strong>clara, visual y directa</strong> para pujar, negociar o descartar.
+            </p>
+
+            <div class="features-checklist">
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Identificación Técnica Precisa:</strong> Código de motor, arquitectura, inyección y tipo de distribución (cadena, correa seca o húmeda).
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Semáforo de Veredicto Mecánico:</strong> Recomendado, Aceptable con reservas o No recomendado, sin medias tintas.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Virtudes y Puntos a Vigilar:</strong> Lo mejor del motor y qué componentes sufren más con los kilómetros.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Checklist de Prueba Física:</strong> Qué escuchar en el arranque en frío, qué mirar en el vano motor y cómo probar la caja.
+                </div>
+              </div>
+            </div>
+
+            <div class="report-cta-box">
+              <div class="card-price-row">
+                <span class="price-value">15 €</span>
+                <span class="price-desc">Precio cerrado · Entrega en PDF</span>
+              </div>
+              <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20solicitar%20el%20Informe%20Reducido%20(Afiche)%20de%2015%E2%82%AC" target="_blank" class="btn btn-whatsapp-card">
+                Solicitar Informe Reducido (15 €)
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contenido Tab 2: Informe Detallado Jaguar XE -->
+      <div class="report-tab-content" id="tab-detallado">
+        <div class="report-showcase-grid">
+          
+          <div class="report-preview-visual">
+            <div class="pages-stacked-card">
+              <div class="page-sample-box">
+                <div class="page-top-label">INFORME DE EVALUACIÓN TÉCNICA · JAGUAR XE 20D INGENIUM</div>
+                <div class="page-verdict-alert">
+                  <strong>CLASIFICACIÓN MECÁNICA FINAL: NO RECOMENDADO</strong>
+                  <p>Riesgo crítico en cadena de distribución trasera, guías y dilución de gasóleo por DPF.</p>
+                </div>
+                <div class="sample-sections-preview">
+                  <div class="sample-section">
+                    <span class="sec-num">1.</span> <strong>Identificación técnica de la familia:</strong> 204DTD / AJ200D (JLR Ingenium I4).
+                  </div>
+                  <div class="sample-section">
+                    <span class="sec-num">2.</span> <strong>Zona crítica de kilometraje:</strong> 100.000 - 130.000 km (Unidad con 120.338 km en riesgo máximo).
+                  </div>
+                  <div class="sample-section">
+                    <span class="sec-num">3.</span> <strong>Protocolo de prueba en frío:</strong> Detección de traqueteo de cadena trasera y lectura OBD.
+                  </div>
+                  <div class="sample-section">
+                    <span class="sec-num">4.</span> <strong>Valoración independiente para compraventa:</strong> Separación nítida de atractivo estético vs ruina mecánica.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="doc-caption">Ejemplo real extraído: Jaguar XE 20d E-Performance Prestige (Dossier completo de 6 páginas A4)</span>
+          </div>
+
+          <div class="report-info-side">
+            <div class="report-badge-tier tier-premium">DOSSIER TÉCNICO EXHAUSTIVO · 4-6 PÁGINAS A4 · 20 €</div>
+            <h3 class="report-title">Informe Técnico Detallado</h3>
+            <p class="report-desc">
+              Para coches de mayor valor económico, compras en concesionario o profesionales de la compraventa que necesitan <strong>un documento pericial completo</strong> para negociar el precio a la baja o proteger su capital.
+            </p>
+
+            <div class="features-checklist">
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Radiografía de la Familia Mecánica:</strong> Todos los modelos que comparten el motor (ej. Jaguar XE, XF, F-Pace, Range Rover Evoque, Velar).
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Desglose de Averías Endémicas:</strong> Tolerancias, lubricación, bombas de alta presión, inyectores y FAP/AdBlue.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Valoración de Compraventa Separada:</strong> Criterio comercial independiente para calcular márgenes y costes de reventa.
+                </div>
+              </div>
+              <div class="feature-item">
+                <span class="f-check">✔</span>
+                <div>
+                  <strong>Fuentes Técnicas y Disclaimer:</strong> Respaldado con documentación técnica de taller europeo y catálogo de recambios.
+                </div>
+              </div>
+            </div>
+
+            <div class="report-cta-box">
+              <div class="card-price-row">
+                <span class="price-value">20 €</span>
+                <span class="price-desc">Precio cerrado · Dossier completo en PDF</span>
+              </div>
+              <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20solicitar%20el%20Informe%20T%C3%A9cnico%20Detallado%20de%2020%E2%82%AC" target="_blank" class="btn btn-whatsapp-card">
+                Solicitar Informe Detallado (20 €)
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NUEVA SECCIÓN DE TARIFAS Y PRECIOS -->
+  <section class="section pricing-section" id="tarifas">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag success-tag">TARIFAS CLARAS Y TRANSPARENTES</span>
+        <h2 class="section-title">Elige el nivel de análisis para tu próximo coche</h2>
+        <p class="section-subtitle">
+          Una inversión mínima que te protege de averías de 4.000 € o te da argumentos técnicos sólidos para rebajar el precio de venta.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- Tarifa 1: Reducido / Afiche -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <span class="pricing-type-badge">DECISIÓN RÁPIDA</span>
+            <h3 class="pricing-title">Informe Reducido</h3>
+            <p class="pricing-subtitle">Afiche técnico visual en 1 página A4</p>
+          </div>
+
+          <div class="pricing-price-wrap">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">15</span>
+            <span class="pricing-period">/ por coche</span>
+          </div>
+
+          <ul class="pricing-features">
+            <li>✔ <strong>1 página A4</strong> con formato póster de lectura inmediata</li>
+            <li>✔ <strong>Semáforo mecánico:</strong> Recomendado, Aceptable o No recomendado</li>
+            <li>✔ Identificación técnica de motor y transmisión</li>
+            <li>✔ Virtudes mecánicas y puntos a vigilar</li>
+            <li>✔ Checklist para tu prueba presencial</li>
+            <li>✔ Entrega personalizada en PDF por WhatsApp</li>
+          </ul>
+
+          <div class="pricing-cta-wrap">
+            <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20solicitar%20el%20Informe%20Reducido%20(Afiche)%20de%2015%E2%82%AC" target="_blank" class="btn btn-outline btn-block">
+              Pedir Informe Reducido (15 €)
+            </a>
+          </div>
+        </div>
+
+        <!-- Tarifa 3: PACK AMBOS (DESTACADO / MÁS POPULAR) -->
+        <div class="pricing-card pricing-featured">
+          <div class="featured-ribbon">⭐ OPCIÓN MÁS POPULAR</div>
+          <div class="pricing-header">
+            <span class="pricing-type-badge badge-featured">PROTECCIÓN TOTAL</span>
+            <h3 class="pricing-title">Pack Ambos Informes</h3>
+            <p class="pricing-subtitle">Afiche visual + Dossier técnico multi-página</p>
+          </div>
+
+          <div class="pricing-price-wrap">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">25</span>
+            <span class="pricing-period">/ por coche</span>
+          </div>
+
+          <div class="pricing-saving-badge">
+            Ahorras 10 € sobre el precio por separado
+          </div>
+
+          <ul class="pricing-features">
+            <li>✔ <strong>TODO lo del Informe Reducido</strong> (Afiche 1 pág. para llevar en el móvil)</li>
+            <li>✔ <strong>TODO lo del Informe Detallado</strong> (Dossier 4-6 págs. para negociar)</li>
+            <li>✔ Historial de campañas, llamadas a revisión y boletines europeos</li>
+            <li>✔ Diagnóstico de distribución, DPF, lubricación y transmisión</li>
+            <li>✔ Valoración de compraventa independiente</li>
+            <li>✔ Asesoramiento prioritario en tu WhatsApp</li>
+          </ul>
+
+          <div class="pricing-cta-wrap">
+            <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20solicitar%20el%20Pack%20Ambos%20Informes%20de%2025%E2%82%AC" target="_blank" class="btn btn-whatsapp-lg btn-block">
+              Pedir Pack Completo (25 €)
+            </a>
+          </div>
+        </div>
+
+        <!-- Tarifa 2: Detallado -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <span class="pricing-type-badge">ANÁLISIS PERICIAL</span>
+            <h3 class="pricing-title">Informe Detallado</h3>
+            <p class="pricing-subtitle">Dossier técnico completo de 4 a 6 páginas A4</p>
+          </div>
+
+          <div class="pricing-price-wrap">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">20</span>
+            <span class="pricing-period">/ por coche</span>
+          </div>
+
+          <ul class="pricing-features">
+            <li>✔ <strong>4 a 6 páginas A4</strong> estructuradas profesionalmente</li>
+            <li>✔ Identificación técnica de códigos de motor y familia mecánica</li>
+            <li>✔ Análisis de averías endémicas y zonas críticas de km</li>
+            <li>✔ Protocolo de diagnosis OBD y prueba en frío</li>
+            <li>✔ Valoración comercial independiente para compraventa</li>
+            <li>✔ Entrega personalizada en PDF por WhatsApp</li>
+          </ul>
+
+          <div class="pricing-cta-wrap">
+            <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20solicitar%20el%20Informe%20T%C3%A9cnico%20Detallado%20de%2020%E2%82%AC" target="_blank" class="btn btn-outline btn-block">
+              Pedir Informe Detallado (20 €)
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pricing-guarantee-note text-center">
+        <p>🔒 <strong>Sin suscripciones ni cobros recurrentes.</strong> Pagas únicamente por el coche concreto que estás evaluando comprar.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección: El Afiche Comercial y QR -->
+  <section class="section qr-section" id="afiche-comercial">
+    <div class="container">
+      <div class="qr-banner-card">
+        
+        <div class="qr-banner-text">
+          <span class="section-tag alert-tag">LLEVA MUHM SIEMPRE CONTIGO</span>
+          <h2 class="qr-banner-title">Guarda nuestro contacto o pásaselo a quien vaya a comprar coche</h2>
+          <p class="qr-banner-desc">
+            Escanea el código QR desde tu teléfono para abrir una conversación directa con nuestro equipo técnico. Si estás en el concesionario o viendo un coche ahora mismo, envíanos el enlace y comenzaremos a investigarlo.
+          </p>
+          <div class="qr-phone-display">
+            <span class="phone-label">Teléfono directo / WhatsApp:</span>
+            <a href="tel:+34608122535" class="phone-number">608 122 535</a>
+          </div>
+          <div class="qr-buttons-row">
+            <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20guardar%20vuestro%20contacto%20para%20cuando%20busque%20coche" target="_blank" class="btn btn-primary btn-md">
+              💬 Abrir WhatsApp Directo
+            </a>
+            <a href="../afiche/afiche_comercial.html" target="_blank" class="btn btn-outline btn-md text-white">
+              📄 Abrir Afiche para Imprimir en A4
+            </a>
+          </div>
+        </div>
+
+        <div class="qr-banner-code">
+          <div class="qr-code-frame">
+            <img src="../assets/qr_whatsapp.svg" alt="Código QR WhatsApp MUHM" class="qr-large-img">
+            <span class="qr-scan-label">ESCANEA PARA CHATEAR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Por Qué No es una Simple Búsqueda en Google -->
+  <section class="section comparison-method-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag primary-tag">RIGOR CIENTÍFICO</span>
+        <h2 class="section-title">¿Por qué esto no es "preguntarle a Google o a ChatGPT"?</h2>
+        <p class="section-subtitle">
+          Las búsquedas convencionales mezclan opiniones subjetivas de foros y las IA generalistas inventan datos. Nuestro método es un sistema técnico riguroso.
+        </p>
+      </div>
+
+      <div class="method-table-wrapper">
+        <table class="method-table">
+          <thead>
+            <tr>
+              <th>Aspecto</th>
+              <th class="col-bad">Búsqueda rápida en Google / Foros</th>
+              <th class="col-bad">Preguntar a una IA genérica</th>
+              <th class="col-good">Auditoría MUHM IA-Assisted</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Identificación del Motor</strong></td>
+              <td>Se queda en el nombre comercial (ej. "Peugeot 1.2").</td>
+              <td>Alucina códigos y confunde generaciones.</td>
+              <td class="cell-good"><strong>Identificación exacta por código, cilindrada y año frontera</strong> (ej. EB2 vs EB2DTS).</td>
+            </tr>
+            <tr>
+              <td><strong>Binomio Motor + Caja</strong></td>
+              <td>Opina del motor sin saber qué caja lleva.</td>
+              <td>Rara vez relaciona fallos de transmisión.</td>
+              <td class="cell-good"><strong>Evaluación conjunta:</strong> Una mecánica buena puede ser descartada si lleva una caja robotizada o DSG seco.</td>
+            </tr>
+            <tr>
+              <td><strong>Bases de Datos</strong></td>
+              <td>Hilos de foros antiguos de 2012 sin actualizar.</td>
+              <td>Respuestas genéricas tipo "hazle el mantenimiento".</td>
+              <td class="cell-good"><strong>Boletines técnicos europeos (TSB), campañas de llamada a revisión y talleres especializados.</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Objetividad</strong></td>
+              <td>Sesgada por fanáticos de marcas o comerciales.</td>
+              <td>Tono complaciente sin veredicto claro.</td>
+              <td class="cell-good"><strong>Semáforo tajante:</strong> Si el motor tiene riesgo congénito caro, te decimos que no lo compres.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Cómo Funciona en 3 Pasos -->
+  <section class="section steps-section" id="como-funciona">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag success-tag">PROCESO PERSONALIZADO Y ÁGIL</span>
+        <h2 class="section-title">Cómo solicitar tu informe en 3 pasos</h2>
+        <p class="section-subtitle">Sin registros complicados. Directamente por WhatsApp con un especialista.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Envíanos el coche</h3>
+          <p class="step-text">
+            Mándanos por WhatsApp el enlace del anuncio (Wallapop, Coches.net, AutoScout, etc.) o una foto de la ficha técnica / datos del vehículo.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Investigamos caso a caso</h3>
+          <p class="step-text">
+            Cruzamos código motor, año de matriculación, historial de campañas de fabricante, caja de cambios y puntos críticos de la unidad.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Recibes tu informe en PDF</h3>
+          <p class="step-text">
+            Elaboramos tu auditoría técnica y te enviamos el documento maquetado directamente a tu WhatsApp, listo para tomar una decisión informada.
+          </p>
+        </div>
+      </div>
+
+      <div class="steps-cta text-center">
+        <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20enviaros%20un%20anuncio%20para%20un%20informe" target="_blank" class="btn btn-primary btn-lg">
+          Enviar enlace de mi coche ahora →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Preguntas Frecuentes (FAQ) -->
+  <section class="section faq-section" id="faq">
+    <div class="container max-w-800">
+      <div class="section-header text-center">
+        <span class="section-tag primary-tag">RESOLVEMOS TUS DUDAS</span>
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Cuánto tardáis en elaborar el informe?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Cada informe es elaborado de forma individualizada por especialistas que contrastan los datos exactos del coche con catálogos técnicos europeos y campañas oficiales. Nos esforzamos por darte una respuesta ágil y con el rigor que requiere una inversión de miles de euros. Te avisamos por WhatsApp en cuanto el documento esté listo para descargar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Qué datos necesitáis para elaborar el informe?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Con el enlace del anuncio en portales como Wallapop, Coches.net o AUTO1 suele ser suficiente. Si tienes acceso a la ficha técnica (foto del permiso de circulación o apartados D.2, P.1, P.2), el análisis puede llegar al nivel exacto de código motor de recambios.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Este informe sustituye a una revisión presencial en taller?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No lo sustituye, sino que <strong>te ahorra pagar revisiones inútiles</strong>. Si un coche monta un motor con fallo catastrófico garantizado (como un 1.2 PureTech con correa deshecha o un Ingenium con cadena trasera estirada), no necesitas gastar 150 € en llevarlo a un mecánico; directamente lo descartas desde tu sofá. Y si la mecánica es recomendada, te damos el checklist exacto para que tú o tu mecánico sepáis dónde mirar.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Trabajáis con compraventas profesionales o solo particulares?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Trabajamos con ambos. Para particulares, el informe evita la ruina económica de una mala compra. Para compraventas y profesionales de subastas (AUTO1, BCA, etc.), permite filtrar miles de lotes rápidamente sin riesgo de garantías posventa caras.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="final-cta-section">
+    <div class="container text-center">
+      <h2 class="final-title">Antes de soltar un solo euro de fianza, pregúntanos</h2>
+      <p class="final-sub">Una consulta técnica de 15 € te puede ahorrar 4.000 € en el taller. Escríbenos ahora mismo.</p>
+      <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20consultar%20un%20coche%20urgente" target="_blank" class="btn btn-whatsapp-giant">
+        <svg class="btn-wa-icon-large" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.815 11.815 0 018.413 3.487 11.821 11.821 0 013.48 8.413c-.003 6.558-5.339 11.893-11.893 11.893h-.005a11.882 11.882 0 01-5.683-1.448L.057 24z"/>
+        </svg>
+        <span>Consultar coche por WhatsApp: 608 122 535</span>
+      </a>
+      <span class="final-guarantee">Respuesta directa y personalizada · Asesoramiento honesto e independiente</span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      
+      <div class="footer-left">
+        <div class="brand-names">
+          <span class="logo-title text-white">MUHM</span>
+          <span class="logo-subtitle text-muted">IA-ASSISTED RESEARCH</span>
+        </div>
+        <p class="footer-legal-copy">
+          Informes técnicos de evaluación de riesgo mecánico para vehículos de ocasión en España y Europa.
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <h4>Contacto Rápido</h4>
+        <p>WhatsApp / Teléfono: <a href="tel:+34608122535" class="footer-link"><strong>608 122 535</strong></a></p>
+        <p>Web: <a href="https://muhm.es" class="footer-link">muhm.es</a></p>
+      </div>
+
+      <div class="footer-right">
+        <h4>Aviso Legal y Descargo</h4>
+        <p class="footer-disclaimer">
+          Los informes constituyen una evaluación técnica informativa basada en datos de ingeniería, campañas oficiales y fallos estadísticos recurrentes. Expresan una valoración de riesgo objetivo y no sustituyen la inspección física presencial ni garantizan la ausencia de vicios ocultos en unidades mal mantenidas.
+        </p>
+      </div>
+
+    </div>
+    
+    <div class="footer-bottom text-center">
+      <p>© 2026 MUHM IA-Assisted Research. Todos los derechos reservados. Coches con más historias buenas.</p>
+    </div>
+  </footer>
+
+  <!-- Modal para Visualizar el Informe Completo -->
+  <div id="imageModal" class="modal" onclick="closeImageModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Vista Ampliada del Informe">
+    <div id="modalCaption"></div>
+  </div>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/34608122535?text=Hola%2C%20quiero%20consultar%20un%20coche%20para%20un%20informe" target="_blank" class="floating-whatsapp" title="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="floating-label">Pedir Informe</span>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
