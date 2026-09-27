@@ -129,7 +129,7 @@ body {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-light);
-  padding: 10px 0 0 0;
+  padding: 14px 0;
   transition: var(--transition);
 }
 
@@ -137,7 +137,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 10px;
 }
 
 .brand-logo {
@@ -187,7 +186,7 @@ body {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 .nav-link {
@@ -196,6 +195,7 @@ body {
   font-size: 13.5px;
   font-weight: 600;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -206,6 +206,14 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.header-btn-text-desktop {
+  display: inline;
+}
+
+.header-btn-text-mobile {
+  display: none;
 }
 
 /* Botones */
@@ -239,11 +247,52 @@ body {
   box-shadow: 0 6px 16px rgba(11, 27, 61, 0.3);
 }
 
-.btn-tariff-hero {
-  font-size: 13.5px !important;
-  padding: 12px 20px !important;
-  white-space: nowrap !important;
-  letter-spacing: -0.2px;
+/* Botones Hero Simétricos y Armoniosos */
+.btn-hero-wa {
+  background: var(--accent-green);
+  color: #FFFFFF;
+  height: 50px;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 14px rgba(0, 135, 62, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.btn-hero-wa:hover {
+  background: var(--accent-green-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 135, 62, 0.38);
+}
+
+.btn-hero-tariff {
+  background: var(--primary-navy);
+  color: #FFFFFF;
+  height: 50px;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 14px rgba(11, 27, 61, 0.22);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.btn-hero-tariff:hover {
+  background: var(--primary-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(11, 27, 61, 0.3);
 }
 
 .btn-whatsapp-header {
@@ -1287,7 +1336,62 @@ body {
   color: var(--text-muted);
 }
 
-/* NUEVO DISEÑO: Tarjetas Comparativas de Método (Sin tablas feas) */
+/* Método Comparativo: Tabla Estructurada en Desktop vs Tarjetas en Móvil */
+.method-table-desktop {
+  display: block;
+  margin-top: 28px;
+}
+
+.method-table-wrapper {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.method-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13.5px;
+}
+
+.method-table th, .method-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.45;
+  vertical-align: middle;
+}
+
+.method-table th {
+  background: var(--bg-alt);
+  font-weight: 800;
+  color: var(--primary-navy);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.col-bad {
+  color: #B91C1C;
+}
+
+.col-good {
+  background: #F0FDF4 !important;
+  color: var(--accent-green) !important;
+  border-left: 2px solid var(--accent-green);
+}
+
+.cell-good {
+  background: #F0FDF4;
+  border-left: 2px solid var(--accent-green);
+  color: #14532D;
+}
+
+.method-cards-mobile {
+  display: none;
+}
+
 .method-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1736,14 +1840,19 @@ body {
   .qr-banner-card { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; }
   .footer-content { grid-template-columns: 1fr; }
+
+  /* Activación de menú móvil a partir de 992px para evitar desbordes en tablets */
+  .main-header { padding: 10px 0 0 0; }
+  .header-container { padding-bottom: 10px; }
+  .nav-menu { display: none !important; }
+  .mobile-menu-btn { display: flex !important; }
+  .mobile-nav-drawer { display: block !important; }
+  .mobile-quick-bar { display: block !important; }
+  .header-btn-text-desktop { display: none !important; }
+  .header-btn-text-mobile { display: inline !important; }
 }
 
 @media (max-width: 768px) {
-  .nav-menu { display: none; }
-  .mobile-menu-btn { display: flex; }
-  .mobile-nav-drawer { display: block; }
-  .mobile-quick-bar { display: block; }
-  
   .section { padding: 46px 0; }
   .section-header { margin-bottom: 24px; }
   .section-title { font-size: 23px; }
@@ -1752,14 +1861,24 @@ body {
   .hero-subtitle { font-size: 14.5px; }
   .hero-highlight-note { font-size: 13.5px; margin-bottom: 20px; }
   .hero-cta-group { flex-direction: column; width: 100%; gap: 10px; }
-  .hero-cta-group .btn { width: 100%; text-align: center; }
+  .hero-cta-group .btn,
+  .hero-cta-group .btn-hero-wa,
+  .hero-cta-group .btn-hero-tariff {
+    width: 100%;
+    height: 46px;
+    font-size: 13.5px;
+    padding: 0 12px;
+    text-align: center;
+  }
   .hero-stats-row { flex-wrap: wrap; gap: 12px; }
   
   /* Filtro solicitado: ocultar en móvil 2 de los 4 motores malos */
   .danger-card.hide-mobile { display: none !important; }
   .danger-cards-grid { grid-template-columns: 1fr; }
   
-  /* Tarjetas de método comparativo en móvil */
+  /* Método Comparativo: Ocultar tabla y mostrar tarjetas solo en móvil */
+  .method-table-desktop { display: none !important; }
+  .method-cards-mobile { display: block !important; }
   .method-cards-grid { grid-template-columns: 1fr; gap: 14px; }
   .method-card { padding: 18px; }
 
