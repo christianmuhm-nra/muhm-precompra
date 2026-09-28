@@ -1775,10 +1775,44 @@ body {
 }
 
 .faq-answer p {
-  padding: 12px 0;
+  padding: 10px 0;
   font-size: 13.5px;
   color: var(--text-body);
+  line-height: 1.55;
+}
+
+.faq-answer p:first-child {
+  padding-top: 14px;
+}
+
+.faq-answer p:last-child {
+  padding-bottom: 14px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 4px 0 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-list li {
+  font-size: 13px;
+  color: var(--text-body);
   line-height: 1.5;
+  position: relative;
+  padding-left: 18px;
+}
+
+.faq-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  top: -1px;
+  color: var(--accent-red);
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .faq-item.open .faq-arrow {
