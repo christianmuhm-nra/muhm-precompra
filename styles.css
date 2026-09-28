@@ -39,9 +39,14 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 76px;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-dark);
   background-color: var(--bg-page);
+}
+
+section[id], div[id] {
+  scroll-margin-top: 76px;
 }
 
 body {
@@ -1336,145 +1341,259 @@ body {
   color: var(--text-muted);
 }
 
-/* Método Comparativo: Tabla Estructurada en Desktop vs Tarjetas en Móvil */
-.method-table-desktop {
-  display: block;
-  margin-top: 28px;
-}
+/* =========================================================
+   MÉTODO DE AUDITORÍA MUHM (4 PILARES Y RIGOR PERICIAL)
+   - Layout responsive de alto impacto visual (ansprechend)
+   - 2 columnas en desktop, 1 columna fluida en móvil
+   - Indicadores de fase, iconos periciales y etiquetas de valor
+   ========================================================= */
 
-.method-table-wrapper {
-  background: #FFFFFF;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-light);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.method-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 13.5px;
-}
-
-.method-table th, .method-table td {
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--border-light);
-  line-height: 1.45;
-  vertical-align: middle;
-}
-
-.method-table th {
-  background: var(--bg-alt);
-  font-weight: 800;
-  color: var(--primary-navy);
-  font-size: 13px;
-  letter-spacing: 0.3px;
-}
-
-.col-bad {
-  color: #B91C1C;
-}
-
-.col-good {
-  background: #F0FDF4 !important;
-  color: var(--accent-green) !important;
-  border-left: 2px solid var(--accent-green);
-}
-
-.cell-good {
-  background: #F0FDF4;
-  border-left: 2px solid var(--accent-green);
-  color: #14532D;
-}
-
-.method-cards-mobile {
-  display: none;
-}
-
-.method-cards-grid {
+.method-pillars-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  gap: 24px;
+  margin-top: 32px;
 }
 
-.method-card {
+.method-pillar-card {
   background: #FFFFFF;
+  border-radius: var(--radius-lg);
   border: 1.5px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 22px;
-  box-shadow: var(--shadow-sm);
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
 
-.method-card-header {
+.method-pillar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #CBD5E1;
+}
+
+/* Línea superior con gradiente personalizado por fase */
+.pillar-step-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1A4789, #38BDF8);
+}
+
+.pillar-step-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4F46E5, #818CF8);
+}
+
+.pillar-step-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0284C7, #38BDF8);
+}
+
+.pillar-step-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #059669, #34D399);
+}
+
+.pillar-card-top {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 16px;
 }
 
-.method-icon-circle {
-  width: 38px;
-  height: 38px;
-  background: var(--blue-light);
-  border-radius: 50%;
+.pillar-step-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.pillar-step-1 .pillar-step-badge {
+  background: #EFF6FF;
+  color: #1E40AF;
+}
+
+.pillar-step-2 .pillar-step-badge {
+  background: #EEF2FF;
+  color: #4338CA;
+}
+
+.pillar-step-3 .pillar-step-badge {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.pillar-step-4 .pillar-step-badge {
+  background: #ECFDF5;
+  color: #047857;
+}
+
+.pillar-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
   flex-shrink: 0;
 }
 
-.method-card-title {
+.pillar-step-1 .pillar-icon-box {
+  background: #EFF6FF;
+  color: #1A4789;
+}
+
+.pillar-step-2 .pillar-icon-box {
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+.pillar-step-3 .pillar-icon-box {
+  background: #E0F2FE;
+  color: #0284C7;
+}
+
+.pillar-step-4 .pillar-icon-box {
+  background: #ECFDF5;
+  color: #059669;
+}
+
+.pillar-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.pillar-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--primary-navy);
+  margin-bottom: 8px;
+  line-height: 1.3;
 }
 
-.method-contrast-block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contrast-row {
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 12.5px;
+.pillar-lead {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 16px;
   line-height: 1.45;
 }
 
-.contrast-row p {
-  margin-top: 2px;
+.pillar-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 18px;
+  flex-grow: 1;
 }
 
-.contrast-bad {
-  background: #FEF2F2;
-  border-left: 3px solid #EF4444;
-  color: #7F1D1D;
+.pillar-list li {
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 18px;
 }
 
-.contrast-bad .contrast-label {
-  font-weight: 800;
-  color: #991B1B;
-  font-size: 11px;
-  letter-spacing: 0.4px;
+.pillar-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  top: -1px;
+  color: var(--primary-blue);
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.contrast-good {
+.pillar-list strong {
+  color: var(--text-dark);
+}
+
+.pillar-footer-pill {
   background: #F0FDF4;
-  border-left: 3px solid #10B981;
-  color: #14532D;
+  border: 1px solid #BBF7D0;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #166534;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.4;
+  margin-top: auto;
 }
 
-.contrast-good .contrast-label {
+.pillar-check {
+  color: var(--accent-green);
   font-weight: 800;
-  color: #047857;
-  font-size: 11px;
-  letter-spacing: 0.4px;
+  flex-shrink: 0;
+}
+
+/* Banner de Garantías Metodológicas Inferior */
+.method-guarantee-banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-top: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.method-banner-col {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.method-banner-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.method-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12.5px;
+}
+
+.method-banner-text strong {
+  color: var(--primary-navy);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.method-banner-text span {
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
 /* Banner QR Section */
@@ -1830,6 +1949,9 @@ body {
 
 /* Responsive Tablet y Móvil */
 @media (max-width: 992px) {
+  html { scroll-padding-top: 110px; }
+  section[id], div[id] { scroll-margin-top: 112px; }
+
   .hero-grid { grid-template-columns: 1fr; }
   .versus-container { grid-template-columns: 1fr; }
   .versus-separator { margin: -10px 0; }
@@ -1840,6 +1962,9 @@ body {
   .qr-banner-card { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; }
   .footer-content { grid-template-columns: 1fr; }
+
+  /* Método MUHM: 1 columna en tablet */
+  .method-pillars-grid { grid-template-columns: 1fr; gap: 18px; }
 
   /* Activación de menú móvil a partir de 992px para evitar desbordes en tablets */
   .main-header { padding: 10px 0 0 0; }
@@ -1853,6 +1978,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  html { scroll-padding-top: 108px; }
+  section[id], div[id] { scroll-margin-top: 110px; }
+
   .section { padding: 46px 0; }
   .section-header { margin-bottom: 24px; }
   .section-title { font-size: 23px; }
@@ -1876,11 +2004,10 @@ body {
   .danger-card.hide-mobile { display: none !important; }
   .danger-cards-grid { grid-template-columns: 1fr; }
   
-  /* Método Comparativo: Ocultar tabla y mostrar tarjetas solo en móvil */
-  .method-table-desktop { display: none !important; }
-  .method-cards-mobile { display: block !important; }
-  .method-cards-grid { grid-template-columns: 1fr; gap: 14px; }
-  .method-card { padding: 18px; }
+  /* Método MUHM: Ajustes de tarjeta y banner en pantalla pequeña */
+  .method-pillar-card { padding: 20px 18px; }
+  .pillar-title { font-size: 16.5px; }
+  .method-guarantee-banner { grid-template-columns: 1fr; gap: 14px; padding: 18px; }
 
   .floating-label { display: none; }
   .floating-whatsapp { padding: 12px; border-radius: 50%; }
