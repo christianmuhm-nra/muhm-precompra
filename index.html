@@ -18,7 +18,7 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2.2">
 </head>
 <body>
 
@@ -692,20 +692,28 @@
           </div>
           <h3 class="pillar-title">Nos aseguramos de qué motor lleva exactamente la unidad</h3>
           <p class="pillar-lead">El nombre comercial de un anuncio ("1.2", "EcoBoost", "TDI") oculta realidades mecánicas completamente opuestas.</p>
-          <ul class="pillar-list">
-            <li>
-              <strong>Código motor de homologación:</strong> Localizamos el código técnico exacto de bloque (ej. distinguir un PureTech atmosférico <em>EB2</em> de un <em>EB2DTS</em> turbo, o un <em>Duratec</em> con correa seca de un <em>EcoBoost</em> bañado en aceite).
-            </li>
-            <li>
-              <strong>Año frontera y normativa Euro:</strong> Verificamos la fecha de fabricación y revisión técnica, donde las marcas corrigen o introducen piezas críticas (cadenas, retenes, inyectores) sin avisar al comprador.
-            </li>
-            <li>
-              <strong>Tipo de distribución y alimentación:</strong> Mapeamos al milímetro si equipa cadena, correa seca tradicional o correa húmeda (<em>wet belt</em>), e inyección directa vs indirecta.
-            </li>
-          </ul>
-          <div class="pillar-footer-pill">
-            <span class="pillar-check">✔</span>
-            <span>Cero errores de identificación: sabemos con exactitud matemática qué llevas bajo el capó.</span>
+          
+          <button class="pillar-toggle-btn" onclick="togglePillar(this)" aria-expanded="false">
+            <span class="toggle-text">Ver desglose técnico</span>
+            <span class="toggle-icon">▾</span>
+          </button>
+
+          <div class="pillar-collapsible">
+            <ul class="pillar-list">
+              <li>
+                <strong>Código motor de homologación:</strong> Localizamos el código técnico exacto de bloque (ej. distinguir un PureTech atmosférico <em>EB2</em> de un <em>EB2DTS</em> turbo, o un <em>Duratec</em> con correa seca de un <em>EcoBoost</em> bañado en aceite).
+              </li>
+              <li>
+                <strong>Año frontera y normativa Euro:</strong> Verificamos la fecha de fabricación y revisión técnica, donde las marcas corrigen o introducen piezas críticas (cadenas, retenes, inyectores) sin avisar al comprador.
+              </li>
+              <li>
+                <strong>Tipo de distribución y alimentación:</strong> Mapeamos al milímetro si equipa cadena, correa seca tradicional o correa húmeda (<em>wet belt</em>), e inyección directa vs indirecta.
+              </li>
+            </ul>
+            <div class="pillar-footer-pill">
+              <span class="pillar-check">✔</span>
+              <span>Cero errores de identificación: sabemos con exactitud matemática qué llevas bajo el capó.</span>
+            </div>
           </div>
         </div>
 
@@ -723,20 +731,28 @@
           </div>
           <h3 class="pillar-title">Base de datos técnica propia fruto de años de investigación</h3>
           <p class="pillar-lead">Un archivo exhaustivo de mecánicas, tolerancias y fallos congénitos documentados caso a caso.</p>
-          <ul class="pillar-list">
-            <li>
-              <strong>Historial de averías endémicas:</strong> Registramos los defectos de diseño y desgastes prematuros de cientos de familias mecánicas en Europa (dilución de combustible, gripados, patines plásticos, carbonilla).
-            </li>
-            <li>
-              <strong>Boletines Técnicos de Taller (TSB):</strong> Accedemos a circulares internas de fabricantes y notas de servicio oficiales que alertan de fallos sistemáticos y nunca llegan al consumidor particular.
-            </li>
-            <li>
-              <strong>Campañas y llamadas a revisión:</strong> Contrastamos si la unidad estaba sujeta a llamadas oficiales de seguridad y si la solución de fábrica resuelve el problema o es un parche temporal.
-            </li>
-          </ul>
-          <div class="pillar-footer-pill">
-            <span class="pillar-check">✔</span>
-            <span>Información pericial de taller: lo que el compraventa y el vendedor particular desconocen o callan.</span>
+          
+          <button class="pillar-toggle-btn" onclick="togglePillar(this)" aria-expanded="false">
+            <span class="toggle-text">Ver desglose técnico</span>
+            <span class="toggle-icon">▾</span>
+          </button>
+
+          <div class="pillar-collapsible">
+            <ul class="pillar-list">
+              <li>
+                <strong>Historial de averías endémicas:</strong> Registramos los defectos de diseño y desgastes prematuros de cientos de familias mecánicas en Europa (dilución de combustible, gripados, patines plásticos, carbonilla).
+              </li>
+              <li>
+                <strong>Boletines Técnicos de Taller (TSB):</strong> Accedemos a circulares internas de fabricantes y notas de servicio oficiales que alertan de fallos sistemáticos y nunca llegan al consumidor particular.
+              </li>
+              <li>
+                <strong>Campañas y llamadas a revisión:</strong> Contrastamos si la unidad estaba sujeta a llamadas oficiales de seguridad y si la solución de fábrica resuelve el problema o es un parche temporal.
+              </li>
+            </ul>
+            <div class="pillar-footer-pill">
+              <span class="pillar-check">✔</span>
+              <span>Información pericial de taller: lo que el compraventa y el vendedor particular desconocen o callan.</span>
+            </div>
           </div>
         </div>
 
@@ -752,20 +768,28 @@
           </div>
           <h3 class="pillar-title">Investigación profunda con IA y corroboración caso por caso</h3>
           <p class="pillar-lead">Aprovechamos la tecnología de vanguardia para rastrear, procesar y validar sin margen de error.</p>
-          <ul class="pillar-list">
-            <li>
-              <strong>Acelerador de rastreo masivo:</strong> Empleamos modelos de IA avanzados para cruzar en segundos millones de datos, despieces técnicos, referencias de recambios y jurisprudencia mecánica europea.
-            </li>
-            <li>
-              <strong>Corroboración técnica humana:</strong> Cero automatizaciones ciegas ni respuestas superficiales. Cada riesgo, dato técnico y sugerencia es verificado y corroborado manualmente por criterio pericial experto.
-            </li>
-            <li>
-              <strong>Análisis de la unidad concreta:</strong> Evaluamos la relación entre kilometraje, historial declarado y zonas de riesgo para esa combinación específica de motor y año.
-            </li>
-          </ul>
-          <div class="pillar-footer-pill">
-            <span class="pillar-check">✔</span>
-            <span>Lo mejor de dos mundos: velocidad de computación con el rigor y la sensatez del ojo experto.</span>
+          
+          <button class="pillar-toggle-btn" onclick="togglePillar(this)" aria-expanded="false">
+            <span class="toggle-text">Ver desglose técnico</span>
+            <span class="toggle-icon">▾</span>
+          </button>
+
+          <div class="pillar-collapsible">
+            <ul class="pillar-list">
+              <li>
+                <strong>Acelerador de rastreo masivo:</strong> Empleamos modelos de IA avanzados para cruzar en segundos millones de datos, despieces técnicos, referencias de recambios y jurisprudencia mecánica europea.
+              </li>
+              <li>
+                <strong>Corroboración técnica humana:</strong> Cero automatizaciones ciegas ni respuestas superficiales. Cada riesgo, dato técnico y sugerencia es verificado y corroborado manualmente por criterio pericial experto.
+              </li>
+              <li>
+                <strong>Análisis de la unidad concreta:</strong> Evaluamos la relación entre kilometraje, historial declarado y zonas de riesgo para esa combinación específica de motor y año.
+              </li>
+            </ul>
+            <div class="pillar-footer-pill">
+              <span class="pillar-check">✔</span>
+              <span>Lo mejor de dos mundos: velocidad de computación con el rigor y la sensatez del ojo experto.</span>
+            </div>
           </div>
         </div>
 
@@ -781,20 +805,28 @@
           </div>
           <h3 class="pillar-title">Auditoría del tren motriz completo y veredicto sin filtro</h3>
           <p class="pillar-lead">Un motor fiable puede ser una ruina si va acoplado a una transmisión problemática.</p>
-          <ul class="pillar-list">
-            <li>
-              <strong>Binomio Motor + Caja de Cambios:</strong> Evaluamos transmisiones con alta tasa de fallos (cajas manuales pilotadas, embragues en seco o mecatrónicas vulnerables) que arruinan la compra.
-            </li>
-            <li>
-              <strong>Periféricos y anticontaminación:</strong> Diagnosticamos la propensión a averías caras en turbocompresores, bombas de alta presión, válvulas EGR y filtros DPF/AdBlue.
-            </li>
-            <li>
-              <strong>Veredicto 100% independiente:</strong> No cobramos comisiones de venta ni intermediamos coches. Si la unidad que estás mirando es una trampa mecánica, te decimos con total honestidad: <em>No la compres</em>.
-            </li>
-          </ul>
-          <div class="pillar-footer-pill">
-            <span class="pillar-check">✔</span>
-            <span>Independencia total: nuestro único objetivo es proteger tu dinero antes de que des la señal.</span>
+          
+          <button class="pillar-toggle-btn" onclick="togglePillar(this)" aria-expanded="false">
+            <span class="toggle-text">Ver desglose técnico</span>
+            <span class="toggle-icon">▾</span>
+          </button>
+
+          <div class="pillar-collapsible">
+            <ul class="pillar-list">
+              <li>
+                <strong>Binomio Motor + Caja de Cambios:</strong> Evaluamos transmisiones con alta tasa de fallos (cajas manuales pilotadas, embragues en seco o mecatrónicas vulnerables) que arruinan la compra.
+              </li>
+              <li>
+                <strong>Periféricos y anticontaminación:</strong> Diagnosticamos la propensión a averías caras en turbocompresores, bombas de alta presión, válvulas EGR y filtros DPF/AdBlue.
+              </li>
+              <li>
+                <strong>Veredicto 100% independiente:</strong> No cobramos comisiones de venta ni intermediamos coches. Si la unidad que estás mirando es una trampa mecánica, te decimos con total honestidad: <em>No la compres</em>.
+              </li>
+            </ul>
+            <div class="pillar-footer-pill">
+              <span class="pillar-check">✔</span>
+              <span>Independencia total: nuestro único objetivo es proteger tu dinero antes de que des la señal.</span>
+            </div>
           </div>
         </div>
 

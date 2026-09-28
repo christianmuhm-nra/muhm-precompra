@@ -1502,6 +1502,45 @@ body {
   line-height: 1.45;
 }
 
+/* Botón de Desglose en Móvil */
+.pillar-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.pillar-toggle-btn:hover, .pillar-toggle-btn:active {
+  background: #FFFFFF;
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.toggle-icon {
+  font-size: 12px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.pillar-collapsible {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .pillar-list {
   list-style: none;
   display: flex;
@@ -1772,13 +1811,25 @@ body {
   transition: max-height 0.3s ease;
   padding: 0 18px;
   background: #FAFBFD;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  color: var(--text-body);
+}
+
+.faq-answer p,
+.faq-answer ul,
+.faq-answer li,
+.faq-answer strong,
+.faq-list,
+.faq-list li,
+.faq-list li strong {
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
 }
 
 .faq-answer p {
-  padding: 10px 0;
-  font-size: 13.5px;
+  padding: 8px 0;
   color: var(--text-body);
-  line-height: 1.55;
 }
 
 .faq-answer p:first-child {
@@ -1791,16 +1842,14 @@ body {
 
 .faq-list {
   list-style: none;
-  padding: 4px 0 10px 0;
+  padding: 2px 0 8px 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .faq-list li {
-  font-size: 13px;
   color: var(--text-body);
-  line-height: 1.5;
   position: relative;
   padding-left: 18px;
 }
@@ -1809,10 +1858,15 @@ body {
   content: "•";
   position: absolute;
   left: 2px;
-  top: -1px;
+  top: 0px;
   color: var(--accent-red);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
+}
+
+.faq-list strong {
+  color: var(--text-dark);
+  font-weight: 700;
 }
 
 .faq-item.open .faq-arrow {
@@ -1997,8 +2051,26 @@ body {
   .steps-grid { grid-template-columns: 1fr; }
   .footer-content { grid-template-columns: 1fr; }
 
-  /* Método MUHM: 1 columna en tablet */
+  /* Método MUHM: 1 columna y pasos desplegables en tablet y móvil */
   .method-pillars-grid { grid-template-columns: 1fr; gap: 18px; }
+  .pillar-toggle-btn { display: inline-flex !important; }
+  .pillar-collapsible {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+    margin-top: 0;
+  }
+  .method-pillar-card.open .pillar-collapsible {
+    max-height: 900px;
+    opacity: 1;
+    margin-top: 14px;
+  }
+  .method-pillar-card.open .pillar-toggle-btn {
+    background: #EFF6FF;
+    border-color: #BFDBFE;
+    color: var(--primary-blue);
+  }
 
   /* Activación de menú móvil a partir de 992px para evitar desbordes en tablets */
   .main-header { padding: 10px 0 0 0; }

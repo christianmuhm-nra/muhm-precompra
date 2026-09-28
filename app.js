@@ -52,6 +52,22 @@ function toggleFaq(button) {
   }
 }
 
+// Desplegable de Pasos del Método en Móvil
+function togglePillar(button) {
+  const card = button.closest('.method-pillar-card');
+  if (!card) return;
+  const isOpen = card.classList.toggle('open');
+  const toggleText = button.querySelector('.toggle-text');
+  const toggleIcon = button.querySelector('.toggle-icon');
+  if (toggleText) {
+    toggleText.textContent = isOpen ? 'Ocultar desglose técnico' : 'Ver desglose técnico';
+  }
+  if (toggleIcon) {
+    toggleIcon.textContent = isOpen ? '▴' : '▾';
+  }
+  button.setAttribute('aria-expanded', isOpen);
+}
+
 // Menú Móvil Desplegable
 function toggleMobileNav() {
   const drawer = document.getElementById('mobileNavDrawer');
