@@ -2119,6 +2119,28 @@ body {
   .floating-whatsapp { padding: 12px; border-radius: 50%; }
 }
 
+@media (max-width: 480px) {
+  .brand-logo { gap: 6px; }
+  .logo-title { font-size: 16px; }
+  .logo-subtitle { font-size: 7px; }
+  .header-actions { gap: 6px; }
+  .btn-whatsapp-header { padding: 6px 10px; font-size: 12px; gap: 5px; }
+  .btn-wa-icon { width: 15px; height: 15px; }
+  .mobile-menu-btn { padding: 6px; width: 34px; height: 34px; }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .main-nav {
+    display: none !important;
+  }
+}
+
+
 /* =========================================================
    PÁGINAS DE FICHAS DE MOTORES (/motores/) & CAMUFLAJE
    ========================================================= */

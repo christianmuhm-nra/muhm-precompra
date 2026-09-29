@@ -76,39 +76,80 @@
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="main-header">
+  <!-- Header / Navigation Principal -->
+  <header class="main-header" id="navbar">
     <div class="container header-container">
       <a href="../../" class="brand-logo">
         <div class="brand-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="m9 12 2 2 4-4"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+            <path d="M12 2a10 10 0 0 1 10 10"></path>
+            <path d="M12 12 2.1 12"></path>
           </svg>
         </div>
-        <div class="brand-text">
+        <div class="brand-names">
           <span class="logo-title">MotorFiable<span class="tld-tag">.es</span></span>
           <span class="logo-subtitle">PERITAJE Y PRECOMPRA</span>
         </div>
       </a>
 
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="../../" class="nav-link">Inicio</a></li>
-          <li><a href="../" class="nav-link" style="color: var(--primary-blue); font-weight:700;">Biblioteca de Motores</a></li>
-          <li><a href="../../#comparativa" class="nav-link">Caso Fiesta</a></li>
-          <li><a href="../../#tarifas" class="nav-link nav-highlight">Tarifas (15 €)</a></li>
-          <li><a href="../../#faq" class="nav-link">FAQ</a></li>
-        </ul>
+      <!-- Menú Desktop -->
+      <nav class="nav-menu" id="desktopNav">
+        <a href="../../" class="nav-link">Inicio</a>
+        <a href="../" class="nav-link" style="color: var(--accent-red); font-weight: 700;">Biblioteca Motores</a>
+        <a href="../../#comparativa" class="nav-link">Caso Fiesta</a>
+        <a href="../../#tarifas" class="nav-link">Tarifas (15 €)</a>
+        <a href="../../#faq" class="nav-link">Dudas</a>
       </nav>
 
-      <div class="header-cta">
+      <!-- Botón Cabecera y Menú Hamburguesa -->
+      <div class="header-actions">
         <a href="https://wa.me/34614286889?text=Hola%2C%20quiero%20pedir%20un%20informe%20precompra" target="_blank" class="btn btn-whatsapp-header">
           <svg class="btn-wa-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.815 11.815 0 018.413 3.487 11.821 11.821 0 013.48 8.413c-.003 6.558-5.339 11.893-11.893 11.893h-.005a11.882 11.882 0 01-5.683-1.448L.057 24z"/>
           </svg>
-          <span>Pedir informe</span>
+          <span class="header-btn-text-desktop">Pedir informe</span>
+          <span class="header-btn-text-mobile">Pedir informe</span>
         </a>
+
+        <!-- Botón Toggle Menú Móvil -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación" onclick="toggleMobileNav()">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="container mobile-nav-links">
+        <a href="../../" class="mobile-nav-link" onclick="closeMobileNav()">🏠 Portada Principal</a>
+        <a href="../" class="mobile-nav-link" style="color: var(--accent-red); font-weight:800;" onclick="closeMobileNav()">🔥 Biblioteca de Motores</a>
+        <a href="../1-2-puretech/" class="mobile-nav-link" onclick="closeMobileNav()">⚠️ 1.2 PureTech (Opel/PSA)</a>
+        <a href="../1-2-tce-dig-t/" class="mobile-nav-link" onclick="closeMobileNav()">⚠️ 1.2 TCe / DIG-T (Nissan/Renault)</a>
+        <a href="../1-0-ecoboost/" class="mobile-nav-link" onclick="closeMobileNav()">⚠️ 1.0 EcoBoost (Ford)</a>
+        <a href="../2-0-ingenium/" class="mobile-nav-link" onclick="closeMobileNav()">⚠️ 2.0 Ingenium Diésel (JLR)</a>
+        <a href="../../#tarifas" class="mobile-nav-link" onclick="closeMobileNav()">💶 Tarifas (15 €)</a>
+        <a href="../../#faq" class="mobile-nav-link" onclick="closeMobileNav()">❓ Preguntas Frecuentes</a>
+        <div class="mobile-nav-cta">
+          <a href="https://wa.me/34614286889?text=Hola%2C%20quiero%20pedir%20un%20informe%20precompra" target="_blank" class="btn btn-whatsapp-lg btn-block" onclick="closeMobileNav()">
+            💬 Pedir informe por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra Rápida Horizontal Pinned en Móvil -->
+    <div class="mobile-quick-bar">
+      <div class="mobile-quick-scroll">
+        <a href="../../" class="quick-pill">Inicio</a>
+        <a href="../" class="quick-pill" style="color: var(--accent-red); font-weight: 800; border-color: #FCA5A5;">Motores</a>
+        <a href="../1-2-puretech/" class="quick-pill pill-highlight">1.2 PureTech</a>
+        <a href="../1-2-tce-dig-t/" class="quick-pill">1.2 DIG-T</a>
+        <a href="../1-0-ecoboost/" class="quick-pill">1.0 EcoBoost</a>
+        <a href="../2-0-ingenium/" class="quick-pill">2.0 Ingenium</a>
+        <a href="../../#tarifas" class="quick-pill">Tarifas (15 €)</a>
       </div>
     </div>
   </header>
@@ -351,5 +392,6 @@
     <span class="floating-label">Auditar 1.2 PureTech (15 €)</span>
   </a>
 
+  <script src="../../app.js"></script>
 </body>
 </html>
