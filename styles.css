@@ -505,8 +505,55 @@ body {
   color: var(--accent-red);
 }
 
+.hero-verdict-intro {
+  margin-bottom: 16px;
+}
+
+.hero-verdict-heading {
+  font-size: 15.5px;
+  color: var(--primary-navy);
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.hero-traffic-lights {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.traffic-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+  border: 1px solid transparent;
+}
+
+.pill-green {
+  background: #F0FDF4;
+  color: #166534;
+  border-left: 3px solid #22C55E;
+}
+
+.pill-amber {
+  background: #FFFBEB;
+  color: #92400E;
+  border-left: 3px solid #F59E0B;
+}
+
+.pill-red {
+  background: #FEF2F2;
+  color: #991B1B;
+  border-left: 3px solid #EF4444;
+}
+
 .hero-subtitle {
-  font-size: 16px;
+  font-size: 15.5px;
   color: var(--text-body);
   margin-bottom: 12px;
   line-height: 1.5;
