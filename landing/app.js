@@ -21,16 +21,22 @@ function switchReportTab(tabId) {
   }
 }
 
-function openImageModal(imgSrc) {
+function openImageModal(imgSrc, captionHtml) {
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImg');
-  modal.style.display = 'block';
-  modalImg.src = imgSrc;
+  const modalCaption = document.getElementById('modalCaption');
+  if (modal) modal.style.display = 'block';
+  if (modalImg) modalImg.src = imgSrc;
+  if (modalCaption) {
+    modalCaption.innerHTML = captionHtml || '';
+  }
 }
 
 function closeImageModal() {
   const modal = document.getElementById('imageModal');
+  const modalCaption = document.getElementById('modalCaption');
   if (modal) modal.style.display = 'none';
+  if (modalCaption) modalCaption.innerHTML = '';
 }
 
 function toggleFaq(button) {
